@@ -10,5 +10,4 @@ if __name__ == "__main__":
     p_b = random.uniform(1.5 , 2.3) # Ponto 2 selecionado
     print("A raiz se encontra no ponto:", round(e.bisseccao(p_a, p_b), 5))
 ```
-Além de printar a raiz no ponto expecifico dessa expressão, ela retorna também os numeros gerados aleatoriamente para ter um numero</br>
-positivo e negativo para que haja resultado.
+Além de printar a raiz no ponto expecifico dessa expressão, ela retorna também os numeros gerados aleatoriamente para ter um numero positivo e negativo para que haja resultado.
