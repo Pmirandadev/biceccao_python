@@ -18,23 +18,26 @@ class Expressao:
 
         if exp is None:
             return
-
+        # Utilizando o if comentado da erro em numeros com 2 casas, a solução foi utilizar isdigit
         for entry in exp.split(' '):
-            if entry.isdigit(): # NESSE CASO TIVE QUE SUBSTITUIR POR ISDIGIT POR QUE 17 DO CODIGO TEM 2 CASAS E DÁ ERRO
+            if entry.isdigit(): 
             # if any([entry in ['0', '1', '2', '3', '4','5', '6', '7', '8', '9']]):
                 self.stack(float(entry))
             else:
                 self.stack(entry)
 
-    def stack(self, value):
+    # Empilha o valor dentro da pilha
+    def stack(self, value): 
         self.t = self.t + 1
         self.s.insert(0, value)
 
-    def pop(self):
+    # Retira o valor da pilha
+    def pop(self): 
         self.t = self.t - 1
         return self.s[self.t + 1]
 
-    def eval(self, x, reset=False):
+    # Faz a avaliação para ler toda expressão matématica da pilha.
+    def eval(self, x, reset=False): 
         if reset:
             self.t = len(self.s) - 1
         
@@ -47,6 +50,8 @@ class Expressao:
         else:
             return self.__switch_op[entry](self.eval(x), self.eval(x))
 
+    # Função para realização da bisseccao e marcando um numero como erro
+    # E fornecendo 2 pontos para achar a raiz entre esses 2 pontos
     def bisseccao (self, p_a, p_b):
         erro = 0.00001
         if (e.eval(p_a, True)) > 0 and (e.eval(p_b, True)) < 0:
