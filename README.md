@@ -1,6 +1,6 @@
-* Atividade feita em python para Bicecção
+# Atividade feita em python para Bicecção
 
-O metodo consiste em buscar raízes em um intervalo de 2 pontos.
+* O metodo consiste em buscar raízes em um intervalo de 2 pontos.
 
 O projeto é simples e direto, basicamente você dita no __main__ a função desejada e os pontos selecionados:
 ```
